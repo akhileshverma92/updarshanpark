@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Gallery
+{% endblock %}
+{% block body %}
+  <div class="w-full min-h-screen bg-[#FFFDD0] py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-center text-[#8E5538] md:text-5xl text-4xl font-bold mb-12">Our Gallery</h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-10">Explore the beauty of UP Darshan Park through our collection of stunning photographs showcasing our monument replicas and park attractions.</p>
+
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/mera_up.JPG" alt="UP Darshan Park" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Mera UP</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/sikri.JPG" alt="Fatehpur Sikri" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Fatehpur Sikri</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/up_darshan_park_entrance.JPG" alt="Park Entrance" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Park Entrance</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/chef_on_wheels.JPG" alt="Food Court" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Food Court</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/mandir.JPG" alt="Temple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Temple Replica</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/sita_ram.JPG" alt="Sita Ram Temple" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Sita Ram Temple</span>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://www.updarshanpark.com/assets/images/mela.jpeg" alt="Park Events" class="w-full h-72 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white text-lg font-semibold">Park Events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

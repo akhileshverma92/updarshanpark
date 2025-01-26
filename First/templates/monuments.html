@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Monuments
+{% endblock %}
+{% block body %}
+<div class="py-10 w-full min-h-[90vh] bg-[#FFFDD0]">
+  <h2 class="text-center text-[#8E5538] md:text-4xl text-3xl font-bold mb-10">Famous Monuments</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-10">
+    <!-- Taj Mahal Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://www.updarshanpark.com/assets/images/taj_1.jpeg" alt="Taj Mahal Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Taj Mahal</h3>
+        <p class="text-gray-600 mb-4">A stunning replica of the iconic Taj Mahal, crafted from recycled materials while maintaining the elegant beauty of the original monument.</p>
+        <button onclick="openModal('tajMahalModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Kashi Vishwanath Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://www.updarshanpark.com/assets/images/kashi_1.jpeg" alt="Kashi Vishwanath Temple Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Kashi Vishwanath Temple</h3>
+        <p class="text-gray-600 mb-4">Experience the divine architecture of Varanasi's famous temple, recreated with meticulous attention to detail using sustainable materials.</p>
+        <button onclick="openModal('kashiModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Bara Imambara Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://media.gettyimages.com/id/500011753/photo/bara-imambara-lucknow.jpg?s=612x612&w=gi&k=20&c=xr8ci-kxQCFUKtAqjBpI5ZbuWPhJUZgafsv3THaWe9I=" alt="Bara Imambara Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Bara Imambara</h3>
+        <p class="text-gray-600 mb-4">Marvel at the grandeur of Lucknow's architectural wonder, recreated using recycled materials while preserving its historical essence.</p>
+        <button onclick="openModal('imambaraModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Jhansi Fort Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://www.updarshanpark.com/assets/images/jhansi_1.jpg" alt="Jhansi Fort Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Jhansi Fort</h3>
+        <p class="text-gray-600 mb-4">A symbol of valor and historical significance, this detailed recreation brings the mighty fortress to life using sustainable materials.</p>
+        <button onclick="openModal('jhansiModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Parinirvana Stupa Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://www.updarshanpark.com/assets/images/maha_1.jpg" alt="Parinirvana Stupa Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Parinirvana Stupa</h3>
+        <p class="text-gray-600 mb-4">A sustainable recreation that captures the spiritual significance and Buddhist heritage of Kushinagar's sacred site.</p>
+        <button onclick="openModal('parinirvanaModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Dudhwa National Park Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://www.updarshanpark.com/assets/images/dudhwa_1.jpg" alt="Dudhwa National Park Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Dudhwa National Park</h3>
+        <p class="text-gray-600 mb-4">A creative recreation showcasing the natural heritage and wildlife ecosystem of Uttar Pradesh's protected area.</p>
+        <button onclick="openModal('dudhwaModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Vindhyachal Temple Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="data:image/jpeg;base64,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" alt="Vindhyachal Temple Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Vindhyachal Temple</h3>
+        <p class="text-gray-600 mb-4">Experience the spiritual heritage of Mirzapur through this sustainable recreation of the sacred Vindhyachal Temple.</p>
+        <button onclick="openModal('vindhyachalModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Gorakhnath Temple Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Gorakhnath_Temple_fountain.jpg/393px-Gorakhnath_Temple_fountain.jpg" alt="Gorakhnath Temple Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Gorakhnath Temple</h3>
+        <p class="text-gray-600 mb-4">Discover the spiritual atmosphere of Gorakhpur through this detailed replica of the revered Gorakhnath Temple.</p>
+        <button onclick="openModal('gorakhnathModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <!-- Banke Bihari Temple Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img class="w-full h-64 object-cover" src="https://thetempleguru.com/wp-content/uploads/2023/11/banke-bihari-temple-vrindavan-8-420x320.jpg" alt="Banke Bihari Temple Replica" />
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-[#8E5538] mb-3">Banke Bihari Temple</h3>
+        <p class="text-gray-600 mb-4">A beautiful recreation of Vrindavan's beloved temple, showcasing the rich cultural heritage of Mathura region.</p>
+        <button onclick="openModal('bankeBihariModal')" class="bg-[#8E5538] text-white px-6 py-2 rounded-lg hover:bg-[#724430] transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Template -->
+  <div id="monumentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg max-w-2xl mx-4 p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="modalTitle" class="text-2xl font-bold text-[#8E5538]"></h3>
+        <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="modalContent" class="text-gray-600"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(modalId) {
+    const modal = document.getElementById('monumentModal');
+    const title = document.getElementById('modalTitle');
+    const content = document.getElementById('modalContent');
+    
+    const modalContent = {
+      tajMahalModal: {
+        title: 'Taj Mahal',
+        content: `
+          <div class="space-y-4">
+            
+            <p>The Taj Mahal replica at UP Darshan Park showcases the magnificent Mughal architecture using recycled materials. This miniature version captures the essence of love and architectural brilliance that the original monument represents.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 10.5 tonnes of recycled materials</li>
+              <li>Detailed recreation of the iconic dome and minarets</li>
+              <li>Features intricate Islamic calligraphy patterns</li>
+            </ul>
+          </div>
+        `
+      },
+      jhansiModal: {
+        title: 'Jhansi Fort',
+        content: `
+          <div class="space-y-4">
+            <p>The Jhansi Fort replica stands as a symbol of valor and historical significance. This detailed recreation brings the mighty fortress to life using sustainable materials.</p>
+            <ul class="list-disc list-inside">
+              <li>Built using 18 tonnes of recycled materials</li>
+              <li>Authentic reproduction of defensive walls and structures</li>
+              <li>Represents the historical legacy of Rani Laxmibai</li>
+            </ul>
+          </div>
+        `
+      },
+      fatehpurModal: {
+        title: 'Fatehpur Sikri',
+        content: `
+          <div class="space-y-4">
+            <p>The Fatehpur Sikri replica showcases the architectural brilliance of Mughal era. This sustainable recreation captures the grandeur of this UNESCO World Heritage site.</p>
+            <ul class="list-disc list-inside">
+              <li>Constructed using 13.5 tonnes of recycled materials</li>
+              <li>Detailed reproduction of Buland Darwaza</li>
+              <li>Features Indo-Islamic architectural elements</li>
+            </ul>
+          </div>
+        `
+      },
+      bankeBihariModal: {
+        title: 'Banke Bihari Temple',
+        content: `
+          <div class="space-y-4">
+            <p>The Banke Bihari Temple replica brings the divine atmosphere of Vrindavan to UP Darshan Park. This miniature version captures the spiritual essence of the original shrine.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 12.5 tonnes of recycled materials</li>
+              <li>Intricate details of temple architecture</li>
+              <li>Represents the cultural heritage of Vrindavan</li>
+            </ul>
+          </div>
+        `
+      },
+      radhaRaniModal: {
+        title: 'Radha Rani Temple',
+        content: `
+          <div class="space-y-4">
+            <p>The Radha Rani Temple replica showcases the architectural beauty of Barsana. This sustainable recreation captures the devotional spirit of the original temple.</p>
+            <ul class="list-disc list-inside">
+              <li>Built using 13.5 tonnes of recycled materials</li>
+              <li>Detailed reproduction of temple architecture</li>
+              <li>Features traditional Hindu architectural elements</li>
+            </ul>
+          </div>
+        `
+      },
+      imambaraModal: {
+        title: 'Bara Imambara',
+        content: `
+          <div class="space-y-4">
+            <p>The Bara Imambara replica captures the grandeur of Lucknow's most iconic monument. This sustainable recreation pays homage to the architectural marvel while promoting environmental consciousness.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 14 tonnes of recycled materials</li>
+              <li>Intricate details of Indo-Islamic architecture</li>
+              <li>Represents the cultural heritage of Lucknow</li>
+            </ul>
+          </div>
+        `
+      },
+      vidhanSabhaModal: {
+        title: 'Vidhan Sabha',
+        content: `
+          <div class="space-y-4">
+            <p>The Vidhan Sabha replica represents the seat of democracy in Uttar Pradesh. This detailed recreation showcases the architectural grandeur of the legislative assembly building.</p>
+            <ul class="list-disc list-inside">
+              <li>Built using 16 tonnes of recycled materials</li>
+              <li>Authentic reproduction of colonial architecture</li>
+              <li>Features detailed facade elements</li>
+            </ul>
+          </div>
+        `
+      },
+      ramMandirModal: {
+        title: 'Ram Mandir',
+        content: `
+          <div class="space-y-4">
+            <p>The Ram Mandir replica brings the divine atmosphere of Ayodhya to UP Darshan Park. This miniature version captures the spiritual significance of this sacred site.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 13 tonnes of recycled materials</li>
+              <li>Detailed reproduction of Nagara architecture</li>
+              <li>Features traditional temple elements</li>
+            </ul>
+          </div>
+        `
+      },
+      vindhyachalModal: {
+        title: 'Vindhyachal Temple',
+        content: `
+          <div class="space-y-4">
+            <p>The Vindhyachal Temple replica showcases the spiritual heritage of Mirzapur. This sustainable recreation captures the divine essence of this sacred shrine.</p>
+            <ul class="list-disc list-inside">
+              <li>Built using 12.5 tonnes of recycled materials</li>
+              <li>Authentic reproduction of temple architecture</li>
+              <li>Features traditional Hindu architectural elements</li>
+            </ul>
+          </div>
+        `
+      },
+      gorakhnathModal: {
+        title: 'Gorakhnath Temple',
+        content: `
+          <div class="space-y-4">
+            <p>The Gorakhnath Temple replica brings the spiritual atmosphere of Gorakhpur to UP Darshan Park. This miniature version captures the essence of this important shrine.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 7.5 tonnes of recycled materials</li>
+              <li>Detailed reproduction of temple architecture</li>
+              <li>Features traditional architectural elements</li>
+            </ul>
+          </div>
+        `
+      },
+      parinirvanaStupaModal: {
+        title: 'Parinirvana Stupa',
+        content: `
+          <div class="space-y-4">
+            <p>A sustainable recreation that captures the spiritual significance and Buddhist heritage of Kushinagar's sacred site.</p>
+            <ul class="list-disc list-inside">
+              <li>Built using 13 tonnes of recycled materials</li>
+              <li>Authentic reproduction of Buddhist architecture</li>
+              <li>Features traditional stupa elements</li>
+            </ul>
+          </div>
+        `
+      },
+      kashiVishwanathModal: {
+        title: 'Kashi Vishwanath Temple',
+        content: `
+          <div class="space-y-4">
+            <p>Experience the divine architecture of Varanasi's famous temple, recreated with meticulous attention to detail using sustainable materials.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 11 tonnes of recycled materials</li>
+              <li>Detailed reproduction of temple architecture</li>
+              <li>Features traditional Hindu architectural elements</li>
+            </ul>
+          </div>
+        `
+      },
+      dudhwaModal: {
+        title: 'Dudhwa National Park',
+        content: `
+          <div class="space-y-4">
+            <p>The Dudhwa National Park replica showcases the natural heritage of Uttar Pradesh. This creative recreation captures the wildlife and ecosystem of this protected area.</p>
+            <ul class="list-disc list-inside">
+              <li>Created using 9.5 tonnes of recycled materials</li>
+              <li>Features representations of local wildlife</li>
+              <li>Highlights the importance of conservation</li>
+            </ul>
+          </div>
+        `
+      }
+    }
+    if (modalContent[modalId]) {
+      title.textContent = modalContent[modalId].title;
+      content.innerHTML = modalContent[modalId].content;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('monumentModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('monumentModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+</script>
+{% endblock %}

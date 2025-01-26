@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  About
+{% endblock %}
+{% block body %}
+<div class="w-full min-h-screen bg-[#FFFDD0]">
+  <div class="welcome flex flex-col md:flex-row px-4 md:px-10 py-8 items-center justify-center gap-8">
+    <div class="left w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg p-4">
+      <img class="w-full h-[350px] object-cover rounded-xl hover:scale-105 transition-transform duration-300" 
+           src="https://www.updarshanpark.com/assets/images/kashi_1.jpeg" 
+           alt="UP Darshan Park">
+    </div>
+    
+    <div class="right w-full md:w-1/2 rounded-2xl bg-white p-8 text-black">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Welcome To UP DARSHAN PARK
+      </h2>
+      <p class="text-lg leading-relaxed">
+        Welcome to Lucknow's first waste-to-wonder park, 'UP Darshan Park'. This park features small replicas of 16 famous monuments 
+        from the state, constructed using waste materials such as iron scraps, scraps of four-wheelers, rolling shutters, rusted almirah, 
+        tyre rims, bicycles frames and household iron waste, among others.
+      </p>
+      <p class="text-lg leading-relaxed mt-4">
+        The models of monuments include Bara Imambara, Lucknow Vidhan Sabha, Jhansi Fort, Banke Bihari and Vrindavan temples of Mathura, 
+        Devipatan Mandir of Balrampur, Taj Mahal, Kashi Vishwanath Temple of Varanasi and Dudhwa National Park. Besides, an open-air theatre, 
+        food court and other facilities will also be part of the park.
+      </p>
+    </div>
+  </div>
+
+  <div class="monuments grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-10 py-8">
+    <div class="monument-card bg-white rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-md">
+      <h3 class="text-2xl font-bold text-black mb-4">Famous Monuments</h3>
+      <p class="text-gray-700">Discover the rich heritage of Uttar Pradesh through our miniature replicas</p>
+    </div>
+    
+    <div class="monument-card bg-white rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-md">
+      <h3 class="text-2xl font-bold text-black mb-4">Sustainable Art</h3>
+      <p class="text-gray-700">Experience art created from recycled materials, promoting environmental consciousness</p>
+    </div>
+    
+    <div class="monument-card bg-white rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 shadow-md">
+      <h3 class="text-2xl font-bold text-black mb-4">Family Entertainment</h3>
+      <p class="text-gray-700">Enjoy our open-air theatre, food court and other exciting facilities</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
